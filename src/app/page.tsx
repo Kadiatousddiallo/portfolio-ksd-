@@ -1,10 +1,12 @@
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      {/* Les prochaines sections viendront ici : About, Skills, Projects... */}
+      <About />
+      {/* Les prochaines sections viendront ici : Skills, Projects... */}
     </main>
   );
 }
