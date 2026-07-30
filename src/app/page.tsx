@@ -8,6 +8,7 @@ import Certifications from "@/components/Certifications";
 import Diplomas from "@/components/Diplomas";
 import CV from "@/components/CV";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
       <Reveal>
         <Contact />
       </Reveal>
+      <Footer />
     </main>
   );
 }
