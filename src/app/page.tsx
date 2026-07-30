@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import GitHubStats from "@/components/GitHubStats";
 import Certifications from "@/components/Certifications";
 import Diplomas from "@/components/Diplomas";
 import CV from "@/components/CV";
@@ -27,6 +28,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <Projects />
+      </Reveal>
+      <Reveal>
+        <GitHubStats />
       </Reveal>
       <Reveal>
         <Certifications />
