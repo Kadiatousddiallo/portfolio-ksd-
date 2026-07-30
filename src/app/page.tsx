@@ -8,20 +8,37 @@ import Certifications from "@/components/Certifications";
 import Diplomas from "@/components/Diplomas";
 import CV from "@/components/CV";
 import Contact from "@/components/Contact";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Certifications />
-      <Diplomas />
-      <CV />
-      <Contact />
+      <Reveal>
+        <About />
+      </Reveal>
+      <Reveal>
+        <Skills />
+      </Reveal>
+      <Reveal>
+        <Experience />
+      </Reveal>
+      <Reveal>
+        <Projects />
+      </Reveal>
+      <Reveal>
+        <Certifications />
+      </Reveal>
+      <Reveal>
+        <Diplomas />
+      </Reveal>
+      <Reveal>
+        <CV />
+      </Reveal>
+      <Reveal>
+        <Contact />
+      </Reveal>
     </main>
   );
 }
