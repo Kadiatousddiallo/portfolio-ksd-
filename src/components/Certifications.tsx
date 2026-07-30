@@ -29,7 +29,7 @@ const certifications: Certification[] = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-24 px-6 bg-black text-white">
+    <section id="certifications" className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">
           Certifications
@@ -39,9 +39,9 @@ export default function Certifications() {
           {certifications.map((cert) => (
             <div
               key={cert.name}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden flex flex-col"
+              className="rounded-2xl border border-zinc-300 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 overflow-hidden flex flex-col"
             >
-              <div className="h-32 bg-zinc-800 flex items-center justify-center text-zinc-600 text-sm">
+              <div className="h-32 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-600 text-sm">
                 Aperçu
               </div>
 
@@ -57,14 +57,14 @@ export default function Certifications() {
                     href={cert.fileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-300 hover:text-blue-400 transition-colors"
+                    className="text-zinc-700 dark:text-zinc-300 hover:text-blue-400 transition-colors"
                   >
                     Voir
                   </a>
                   <a
                     href={cert.fileUrl}
                     download
-                    className="text-zinc-300 hover:text-blue-400 transition-colors"
+                    className="text-zinc-700 dark:text-zinc-300 hover:text-blue-400 transition-colors"
                   >
                     Télécharger
                   </a>

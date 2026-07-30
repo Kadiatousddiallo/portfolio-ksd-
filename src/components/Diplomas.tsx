@@ -20,7 +20,7 @@ const diplomas: Diploma[] = [
 
 export default function Diplomas() {
   return (
-    <section id="diplomas" className="py-24 px-6 bg-black text-white">
+    <section id="diplomas" className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Diplômes</h2>
 
@@ -28,7 +28,7 @@ export default function Diplomas() {
           {diplomas.map((diploma) => (
             <div
               key={diploma.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 flex flex-col sm:flex-row sm:items-center gap-4"
+              className="rounded-2xl border border-zinc-300 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 p-6 flex flex-col sm:flex-row sm:items-center gap-4"
             >
               <div className="flex-1">
                 <h3 className="text-lg font-semibold mb-1">
@@ -37,7 +37,7 @@ export default function Diplomas() {
                 <p className="text-zinc-500 text-sm mb-1">
                   {diploma.institution} · {diploma.year}
                 </p>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
                   {diploma.description}
                 </p>
               </div>
@@ -47,14 +47,14 @@ export default function Diplomas() {
                   href={diploma.fileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full border border-zinc-700 hover:border-blue-500 transition-colors text-center"
+                  className="px-4 py-2 rounded-full border border-zinc-300 dark:border-zinc-700 hover:border-blue-500 transition-colors text-center"
                 >
                   Voir
                 </a>
                 <a
                   href={diploma.fileUrl}
                   download
-                  className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors text-center"
+                  className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors text-center text-white"
                 >
                   Télécharger
                 </a>
