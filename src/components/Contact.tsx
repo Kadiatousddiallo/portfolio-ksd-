@@ -38,7 +38,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-black text-white">
+    <section id="contact" className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Coordonnées */}
         <div>
@@ -47,7 +47,7 @@ export default function Contact() {
             {contactInfo.map((item) => {
               const Icon = item.icon;
               const content = (
-                <div className="flex items-center gap-3 text-zinc-300">
+                <div className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300">
                   <Icon size={18} className="text-blue-400" />
                   <span>{item.label}</span>
                 </div>
@@ -79,7 +79,7 @@ export default function Contact() {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full rounded-lg bg-zinc-900 border border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+            className="w-full rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
           />
           <input
             type="email"
@@ -88,7 +88,7 @@ export default function Contact() {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full rounded-lg bg-zinc-900 border border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+            className="w-full rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
           />
           <input
             type="text"
@@ -97,7 +97,7 @@ export default function Contact() {
             value={form.subject}
             onChange={handleChange}
             required
-            className="w-full rounded-lg bg-zinc-900 border border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+            className="w-full rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
           />
           <textarea
             name="message"
@@ -106,11 +106,11 @@ export default function Contact() {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full rounded-lg bg-zinc-900 border border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500 resize-none"
+            className="w-full rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm focus:outline-none focus:border-blue-500 resize-none"
           />
           <button
             type="submit"
-            className="w-full py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors font-medium"
+            className="w-full py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors font-medium text-white"
           >
             Envoyer
           </button>
