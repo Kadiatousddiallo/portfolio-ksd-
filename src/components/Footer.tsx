@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
+import SocialLinks from "@/components/SocialLinks";
 
 const quickLinks = [
   { label: "À propos", href: "#about" },
@@ -36,6 +37,9 @@ export default function Footer() {
             </a>
           ))}
         </div>
+
+        {/* Réseaux sociaux */}
+        <SocialLinks />
 
         {/* Retour en haut */}
         <button
