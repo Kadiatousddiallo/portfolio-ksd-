@@ -12,7 +12,7 @@ const projects: Project[] = [
     description:
       "Système de génération automatique de rapports intelligents à partir de données métier, avec tableaux de bord et export PDF.",
     technologies: ["Laravel", "PostgreSQL", "Angular", "Docker"],
-    githubUrl: "https://github.com/ton-pseudo/siga-smart-reports",
+    githubUrl: "https://github.com/Kadiatousddiallo/siga-smart-reports",
     demoUrl: "",
   },
   {
@@ -20,7 +20,7 @@ const projects: Project[] = [
     description:
       "Application de gestion et de suivi des accidents : déclaration, historique, statistiques et notifications.",
     technologies: ["Spring Boot", "MySQL", "React"],
-    githubUrl: "https://github.com/ton-pseudo/gestion-accidents",
+    githubUrl: "https://github.com/Kadiatousddiallo/gestion-accidents",
     demoUrl: "",
   },
 ];

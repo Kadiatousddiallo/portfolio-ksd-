@@ -1,6 +1,6 @@
 import { Star, GitFork, Users, BookMarked } from "lucide-react";
 
-const GITHUB_USERNAME = "ton-pseudo"; // ⚠️ remplace par ton vrai pseudo GitHub
+const GITHUB_USERNAME = "Kadiatousddiallo"; // ⚠️ remplace par ton vrai pseudo GitHub
 
 type GithubUser = {
   public_repos: number;
