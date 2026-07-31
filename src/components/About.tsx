@@ -1,9 +1,7 @@
-import Image from "next/image";
-
 const stats = [
-  { label: "Licence obtenue", value: "Génie Logiciel & SI" },
-  { label: "Projets réalisés", value: "6+" },
-  { label: "Stage effectué", value: "1" },
+  { label: "Licence obtenue", value: "Génie Logiciel & Systèmes d'Information" },
+  { label: "Projets réalisés", value: "5+" },
+  { label: "Stage effectué", value: "2" },
   { label: "Certifications", value: "3+" },
   { label: "Technologies maîtrisées", value: "12+" },
 ];
@@ -13,28 +11,22 @@ export default function About() {
     <section id="about" className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Photo */}
-        <div className="w-full aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden border border-zinc-300 dark:border-zinc-800 relative">
-          <Image
-            src="/images/about.jpg"
-            alt="Kadiatou Sadio Diallo"
-            fill
-            sizes="(max-width: 768px) 100vw, 400px"
-            className="object-cover"
-          />
+        <div className="w-full aspect-square max-w-sm mx-auto rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-600">
+          Photo
         </div>
 
         {/* Texte */}
         <div>
           <h2 className="text-3xl font-bold mb-6">À propos</h2>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
-            Je suis Kadiatou Sadio Diallo, jeune diplômée en Licence Génie
-            Logiciel et Systèmes d&apos;Information. Curieuse et rigoureuse,
+            Je suis Kadiatou Sadio DIALLO, jeune diplômée en Licence Génie
+            Logiciel et Systèmes d&apos;Information à l&apos;École Supérieure Polytechnique de Dakar. Curieuse et rigoureuse,
             j&apos;aime transformer un besoin métier en une application
             fonctionnelle, propre et bien pensée — du modèle de données
             jusqu&apos;à l&apos;interface utilisateur.
           </p>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Je recherche aujourd&apos;hui un stage, un premier emploi ou une
+            Je recherche aujourd&apos;hui un stage, un premier emploi ou une alternance dans le domaine du développement logiciel et des systèmes d&apos;information, avec une
             poursuite en Master, pour continuer à apprendre au contact
             d&apos;équipes expérimentées.
           </p>

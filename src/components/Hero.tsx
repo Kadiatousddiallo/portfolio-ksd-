@@ -17,7 +17,7 @@ export default function Hero() {
 
       {/* Nom complet */}
       <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
-        Kadiatou Sadio Diallo
+        Kadiatou Sadio DIALLO
       </h1>
 
       {/* Sous-titre */}
@@ -29,7 +29,7 @@ export default function Hero() {
       <p className="max-w-2xl text-zinc-600 dark:text-zinc-400 text-base sm:text-lg mb-10 leading-relaxed">
         Jeune diplômée en Génie Logiciel et Systèmes d&apos;Information, passionnée
         par le développement logiciel, les systèmes d&apos;information, la
-        conception d&apos;applications web et la valorisation des données.
+        conception d&apos;applications web/mobile et la valorisation des données.
       </p>
 
       {/* Boutons */}

@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   try {
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>", // adresse d'expédition de test fournie par Resend
-      to: "kadiatou.diallo@email.com", // ⚠️ remplace par ta vraie adresse email
+      to: "kadiatousddiallo@gmail.com", // ⚠️ remplace par ta vraie adresse email
       replyTo: email, // pour pouvoir répondre directement au recruteur
       subject: `[Portfolio] ${subject}`,
       text: `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
