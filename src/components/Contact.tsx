@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Mail, Phone, Link2, Code2, MapPin } from "lucide-react";
 
 const contactInfo = [
-  { icon: Phone, label: "+221 77 314 30 46", href: "tel:+221773143046" },
-  { icon: Mail, label: "kadiatousddiallo@gmail.com", href: "mailto:kadiatousddiallo@gmail.com" },
-  { icon: Link2, label: "LinkedIn", href: "https://linkedin.com/in/kadiatou-sadio-diallo-a1b478320" },
-  { icon: Code2, label: "GitHub", href: "https://github.com/Kadiatousddiallo" },
+  { icon: Phone, label: "+221 XX XXX XX XX", href: "tel:+221XXXXXXXXX" },
+  { icon: Mail, label: "kadiatou.diallo@email.com", href: "mailto:kadiatou.diallo@email.com" },
+  { icon: Link2, label: "LinkedIn", href: "https://linkedin.com/in/ton-profil" },
+  { icon: Code2, label: "GitHub", href: "https://github.com/ton-pseudo" },
   { icon: MapPin, label: "Dakar, Sénégal", href: "" },
 ];
 
@@ -18,6 +18,9 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
+    "idle"
+  );
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,15 +29,24 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setStatus("sending");
 
-    const body = `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`;
-    const mailtoUrl = `mailto:kadiatousddiallo@gmail.com?subject=${encodeURIComponent(
-      form.subject
-    )}&body=${encodeURIComponent(body)}`;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    window.location.href = mailtoUrl;
+      if (!res.ok) throw new Error("Envoi échoué");
+
+      setStatus("success");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -110,10 +122,22 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="w-full py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors font-medium text-white"
+            disabled={status === "sending"}
+            className="w-full py-3 rounded-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 transition-colors font-medium text-white"
           >
-            Envoyer
+            {status === "sending" ? "Envoi en cours..." : "Envoyer"}
           </button>
+
+          {status === "success" && (
+            <p className="text-sm text-green-500 text-center">
+              Message envoyé avec succès !
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-sm text-red-500 text-center">
+              Une erreur est survenue, réessaie plus tard.
+            </p>
+          )}
         </form>
       </div>
     </section>

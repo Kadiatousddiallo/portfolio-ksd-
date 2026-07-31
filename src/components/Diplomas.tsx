@@ -8,14 +8,22 @@ type Diploma = {
 
 const diplomas: Diploma[] = [
   {
-    title: "Licence en Génie Logiciel et Systèmes d'Information",
-    institution: "Ecole Supérieure Polytechnique de Dakar",
-    year: "2024",
+    title: "Baccalauréat Série Scientifique",
+    institution: "Cours Privé Académia de Limamoulaye",
+    year: "2025-2026",
     description:
-      "Formation axée sur le développement logiciel, la conception de systèmes d'information, les bases de données et l'ingénierie web.",
-    fileUrl: "/diplomes/licence-genie-logiciel.pdf",
+      "Diplôme obtenu avec mention Passable, attestant de la réussite aux examens du baccalauréat dans la série scientifique.",
+    fileUrl: "/diplomes/diplome-bac.pdf",
   },
   // Ajoute un nouveau diplôme en copiant un bloc { ... } ci-dessus
+  {
+    title: "Diplôme de Technicien Supérieur en Informatique",
+    institution: "Ecole Supérieure Polytechnique de Dakar",
+    year: "2023-2025",
+    description:
+      "Formation axée sur le développement logiciel, la conception de systèmes d'information, les bases de données et l'ingénierie web.",
+    fileUrl: "/diplomes/diplome-dst.pdf",
+  },
 ];
 
 export default function Diplomas() {
