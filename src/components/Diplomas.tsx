@@ -9,7 +9,7 @@ type Diploma = {
 const diplomas: Diploma[] = [
   {
     title: "Licence en Génie Logiciel et Systèmes d'Information",
-    institution: "Nom de ton établissement",
+    institution: "Ecole Supérieure Polytechnique de Dakar",
     year: "2024",
     description:
       "Formation axée sur le développement logiciel, la conception de systèmes d'information, les bases de données et l'ingénierie web.",

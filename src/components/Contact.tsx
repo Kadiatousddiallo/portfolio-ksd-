@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Mail, Phone, Link2, Code2, MapPin } from "lucide-react";
 
 const contactInfo = [
-  { icon: Phone, label: "+221 XX XXX XX XX", href: "tel:+221XXXXXXXXX" },
-  { icon: Mail, label: "kadiatou.diallo@email.com", href: "mailto:kadiatou.diallo@email.com" },
-  { icon: Link2, label: "LinkedIn", href: "https://linkedin.com/in/ton-profil" },
-  { icon: Code2, label: "GitHub", href: "https://github.com/ton-pseudo" },
+  { icon: Phone, label: "+221 77 314 30 46", href: "tel:+221773143046" },
+  { icon: Mail, label: "kadiatousddiallo@gmail.com", href: "mailto:kadiatousddiallo@gmail.com" },
+  { icon: Link2, label: "LinkedIn", href: "https://linkedin.com/in/kadiatou-sadio-diallo-a1b478320" },
+  { icon: Code2, label: "GitHub", href: "https://github.com/Kadiatousddiallo" },
   { icon: MapPin, label: "Dakar, Sénégal", href: "" },
 ];
 
@@ -30,7 +30,7 @@ export default function Contact() {
     e.preventDefault();
 
     const body = `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`;
-    const mailtoUrl = `mailto:kadiatou.diallo@email.com?subject=${encodeURIComponent(
+    const mailtoUrl = `mailto:kadiatousddiallo@gmail.com?subject=${encodeURIComponent(
       form.subject
     )}&body=${encodeURIComponent(body)}`;
 

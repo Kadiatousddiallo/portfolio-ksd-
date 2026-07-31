@@ -1,9 +1,18 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
       {/* Photo de profil */}
-      <div className="w-32 h-32 rounded-full bg-zinc-200 dark:bg-zinc-800 border-2 border-blue-500 mb-8 flex items-center justify-center text-4xl font-bold text-blue-500">
-        KSD
+      <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-blue-500 mb-8 relative">
+        <Image
+          src="/images/profile.jpg"
+          alt="Photo de Kadiatou Sadio Diallo"
+          fill
+          sizes="128px"
+          className="object-cover"
+          priority
+        />
       </div>
 
       {/* Nom complet */}
@@ -26,7 +35,7 @@ export default function Hero() {
       {/* Boutons */}
       <div className="flex flex-col sm:flex-row gap-4">
         <a
-          href="/cv.pdf"
+          href="/cv/cv-fr.pdf"
           className="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors font-medium text-white"
         >
           Télécharger mon CV

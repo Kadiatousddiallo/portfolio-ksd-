@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { label: "Licence obtenue", value: "Génie Logiciel & SI" },
   { label: "Projets réalisés", value: "6+" },
@@ -11,8 +13,14 @@ export default function About() {
     <section id="about" className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Photo */}
-        <div className="w-full aspect-square max-w-sm mx-auto rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-600">
-          Photo
+        <div className="w-full aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden border border-zinc-300 dark:border-zinc-800 relative">
+          <Image
+            src="/images/about.jpg"
+            alt="Kadiatou Sadio Diallo"
+            fill
+            sizes="(max-width: 768px) 100vw, 400px"
+            className="object-cover"
+          />
         </div>
 
         {/* Texte */}
