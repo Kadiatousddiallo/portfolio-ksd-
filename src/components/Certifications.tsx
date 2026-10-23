@@ -7,22 +7,22 @@ type Certification = {
 
 const certifications: Certification[] = [
   {
-    name: "Introduction à Docker",
-    organization: "Coursera",
-    date: "2024",
-    fileUrl: "/certifications/docker.pdf",
+    name: "Certificat D'accomplissement Les fondements de la gestion de projet agile",
+    organization: "Linkedin Learning",
+    date: "2026",
+    fileUrl: "/certifications/agile.pdf",
   },
   {
-    name: "Fondamentaux Angular",
-    organization: "OpenClassrooms",
-    date: "2024",
-    fileUrl: "/certifications/angular.pdf",
+    name: "Certificat D'accomplissement Les fondements de la sécurité informatique et de la cybersécurité",
+    organization: "Linkedin Learning",
+    date: "2026",
+    fileUrl: "/certifications/cybersecurity.pdf",
   },
   {
-    name: "Bases de données PostgreSQL",
+    name: "Certificat D'accomplissement Les fondements de la gestion de projet",
     organization: "Udemy",
-    date: "2023",
-    fileUrl: "/certifications/postgresql.pdf",
+    date: "2026",
+    fileUrl: "/certifications/gestion-projet.pdf",
   },
   // Ajoute une nouvelle certification en copiant un bloc { ... } ci-dessus
 ];
@@ -41,8 +41,21 @@ export default function Certifications() {
               key={cert.name}
               className="rounded-2xl border border-zinc-300 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 overflow-hidden flex flex-col"
             >
-              <div className="h-32 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-600 text-sm">
-                Aperçu
+              {/* Aperçu réel du PDF (première page) */}
+              <div className="relative h-48 bg-zinc-200 dark:bg-zinc-800">
+                <iframe
+                  src={`${cert.fileUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                  title={`Aperçu : ${cert.name}`}
+                  className="w-full h-full pointer-events-none"
+                />
+                {/* Couche transparente cliquable par-dessus l'aperçu */}
+                <a
+                  href={cert.fileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ouvrir ${cert.name}`}
+                  className="absolute inset-0"
+                />
               </div>
 
               <div className="p-5 flex flex-col flex-1">

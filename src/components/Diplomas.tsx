@@ -7,14 +7,16 @@ type Diploma = {
 };
 
 const diplomas: Diploma[] = [
+
   {
-    title: "Baccalauréat Série Scientifique",
-    institution: "Cours Privé Académia de Limamoulaye",
+    title: "Licence en Genie Logiciel et Systèmes d'Information",
+    institution: "Ecole Supérieure Polytechnique de Dakar",
     year: "2025-2026",
     description:
-      "Diplôme obtenu avec mention Passable, attestant de la réussite aux examens du baccalauréat dans la série scientifique.",
-    fileUrl: "/diplomes/diplome-bac.pdf",
-  },
+      "Formation axée sur le développement logiciel, la conception de systèmes d'information, les bases de données et l'ingénierie web.",
+    fileUrl: "/diplomes/diplome-licence.pdf",
+  },  
+  
   // Ajoute un nouveau diplôme en copiant un bloc { ... } ci-dessus
   {
     title: "Diplôme de Technicien Supérieur en Informatique",
@@ -24,6 +26,16 @@ const diplomas: Diploma[] = [
       "Formation axée sur le développement logiciel, la conception de systèmes d'information, les bases de données et l'ingénierie web.",
     fileUrl: "/diplomes/diplome-dst.pdf",
   },
+
+  {
+    title: "Baccalauréat Série Scientifique",
+    institution: "Cours Privé Académia de Limamoulaye",
+    year: "2022-2023",
+    description:
+      "Diplôme obtenu avec mention Passable, attestant de la réussite aux examens du baccalauréat dans la série scientifique.",
+    fileUrl: "/diplomes/diplome-bac.pdf",
+  }, 
+
 ];
 
 export default function Diplomas() {
