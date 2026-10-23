@@ -71,13 +71,13 @@ export default function Diplomas() {
                 >
                   Voir
                 </a>
-                <a
+                {/* <a
                   href={diploma.fileUrl}
                   download
                   className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors text-center text-white"
                 >
                   Télécharger
-                </a>
+                </a> */}
               </div>
             </div>
           ))}

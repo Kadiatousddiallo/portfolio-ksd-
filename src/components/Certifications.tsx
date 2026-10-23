@@ -74,13 +74,13 @@ export default function Certifications() {
                   >
                     Voir
                   </a>
-                  <a
+                  {/* <a
                     href={cert.fileUrl}
                     download
                     className="text-zinc-700 dark:text-zinc-300 hover:text-blue-400 transition-colors"
                   >
                     Télécharger
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
