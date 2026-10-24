@@ -1,13 +1,13 @@
 import { Code2, Link2, Mail, Phone, MessageCircle } from "lucide-react";
 
 const socials = [
-  { icon: Code2, href: "https://github.com/ton-pseudo", label: "GitHub" },
-  { icon: Link2, href: "https://linkedin.com/in/ton-profil", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:kadiatou.diallo@email.com", label: "Email" },
-  { icon: Phone, href: "tel:+221XXXXXXXXX", label: "Téléphone" },
+  { icon: Code2, href: "https://github.com/Kadiatousddiallo", label: "GitHub" },
+  { icon: Link2, href: "https://linkedin.com/in/kadiatou-sadio-diallo-a1b478320", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:kadiatousddiallo@email.com", label: "Email" },
+  { icon: Phone, href: "tel:+221773143046", label: "Téléphone" },
   {
     icon: MessageCircle,
-    href: "https://wa.me/221XXXXXXXXX",
+    href: "https://wa.me/221773143046",
     label: "WhatsApp",
   },
 ];

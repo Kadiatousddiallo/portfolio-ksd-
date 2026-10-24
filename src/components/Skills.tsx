@@ -17,7 +17,7 @@ const skillCategories = [
   },
    {
     title: "Modélisation et conception",
-    items: ["UML (cas d’utilisation, classes, objets, séquence)", "Merise (MCD, MLD, MPD)", "Conception orientée objet", "Design Patterns"],
+    items: ["UML (cas d’utilisation, classes, objets, séquence)", "Merise (MCD, MLD, MPD)", "Conception orientée objet"],
   },
 ];
 

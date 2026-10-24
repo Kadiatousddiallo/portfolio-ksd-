@@ -1,34 +1,62 @@
-import Image from "next/image";
-
 type Project = {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl?: string;
   githubUrl?: string;
   demoUrl?: string;
+  imageUrl?: string;
 };
 
 const projects: Project[] = [
+
   {
-    title: "SIGA Smart Reports",
+    title: "Gestion des BOUTIQUES - 2026",
     description:
-      "Plateforme de reporting décisionnel : génération automatique de rapports intelligents, tableaux de bord interactifs et export PDF.",
-    technologies: ["Laravel", "PostgreSQL", "Angular", "Docker"],
-    imageUrl: "/images/projects/siga.png",
-    githubUrl: "https://github.com/ton-pseudo/siga-smart-reports",
-    demoUrl: "https://lien-de-ta-demo.com",
+      "Apllication de gestion des boutiques avec fonctionnalités de suivi des ventes, inventaire et rapports détaillés téléchargés.",
+    technologies: ["Laravel", "PostgreSQL", "Angular", "Docker", "Laravel", "PHP", "Angular", "PostgreSQL", "Docker", "Docker Compose", "Chart.js", "Leaflet", "Git", "GitHub", "REST API", "Data Warehouse", "ETL", "IA"],
+    githubUrl: "https://github.com/Kadiatousddiallo/siga-smart-reports",
+    demoUrl: "/projet/boutique/demo.mp4",
+    imageUrl: "/projet/boutique/apercu.png",
   },
   {
-    title: "Gestion des accidents",
+    title: "SIGA Smart Reports - 2026",
     description:
-      "Plateforme web permettant aux citoyens de signaler des accidents avec leur localisation, des photos et une description.",
-    technologies: ["Laravel", "MySQL", "Google Maps API", "Vonage"],
-    imageUrl: "/images/projects/accidents.png",
-    githubUrl: "https://github.com/ton-pseudo/gestion-accidents",
-    demoUrl: "",
+      "Système de génération automatique de rapports intelligents à partir de données métier, avec tableaux de bord et export PDF.",
+    technologies: ["Laravel", "PostgreSQL", "Angular", "Docker", "Laravel", "PHP", "Angular", "PostgreSQL", "Docker", "Docker Compose", "Chart.js", "Leaflet", "Git", "GitHub", "REST API", "Data Warehouse", "ETL", "IA"],
+    githubUrl: "https://github.com/Kadiatousddiallo/siga-smart-reports",
+    demoUrl: "/projet/siga/demo.mp4",
+    imageUrl: "/projet/siga/apercu.png",
   },
-  // Ajoute un nouveau projet en copiant un bloc { ... } ci-dessus
+  {
+    title: "Gestion des accidents - 2025",
+    description:
+      "Application de gestion et de suivi des accidents : déclaration, historique, statistiques et notifications.",
+    technologies: [
+  "Astah UML",
+  "HTML5",
+  "JavaScript",
+  "CSS3",
+  "Vonage",
+  "XAMPP",
+  "Google Maps API",
+  "MySQL",
+  "Visual Studio Code",
+  "Laravel"
+],
+    githubUrl: "https://github.com/Kadiatousddiallo/gestion-accidents",
+    demoUrl: "/projet/accidents/demo.mp4",
+    imageUrl: "/projet/accidents/apercu.png",
+  },
+
+  {
+    title: "ATP Finals - 2024",
+    description:
+      "Suivez les dernières informations de vos joueurs préférés. Consultez le classements, la programmation des matchs et bien plus encore",
+    technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "Xampp",],
+    githubUrl: "https://github.com/Kadiatousddiallo/atp-finals",
+    // demoUrl: "/projet/atp/demo.jpg",
+    imageUrl: "/projet/atp/apercu.png",
+  },
 ];
 
 export default function Projects() {
@@ -43,25 +71,24 @@ export default function Projects() {
               key={project.title}
               className="rounded-2xl border border-zinc-300 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 overflow-hidden flex flex-col"
             >
-              {/* Image d'aperçu du projet */}
-              <div className="relative h-48 bg-zinc-200 dark:bg-zinc-800">
-                {project.imageUrl ? (
-                  <Image
+              {project.imageUrl ? (
+                <div className="h-40 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-600 text-sm">
+                  <img
                     src={project.imageUrl}
-                    alt={`Aperçu du projet ${project.title}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                    className="object-cover"
+                    alt={project.title}
+                    className="w-full h-full object-cover"
                   />
-                ) : (
-                  <div className="h-full flex items-center justify-center text-zinc-500 dark:text-zinc-600 text-sm">
-                    Aperçu bientôt disponible
-                  </div>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div className="h-40 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-600 text-sm">
+                  Image du projet
+                </div>
+              )}
 
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  {project.title}
+                </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4 flex-1">
                   {project.description}
                 </p>
@@ -70,14 +97,14 @@ export default function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded-full bg-zinc-200 dark:bg-zinc-800 text-xs text-blue-500 dark:text-blue-400"
+                      className="px-2.5 py-1 rounded-full bg-zinc-200 dark:bg-zinc-800 text-xs text-blue-400"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4 text-sm">
+                <div className="flex gap-3 text-sm">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
