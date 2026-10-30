@@ -1,18 +1,4 @@
 const experiences = [
-  {
-    role: "Développeuse Web Full Stack",
-    company: "Atech Cybersecurity",
-    period: "Stage",
-    date: "Mai 2025 - Juillet 2025",
-    description:
-      "Conception et réalisation d'une plateforme web permettant aux citoyens de signaler rapidement des accidents en transmettant leur localisation, des photos et une description aux services d'urgence afin d'améliorer leur temps d'intervention.",
-    tasks: [
-      "Développement d'une application web avec Laravel selon une architecture MVC.",
-      "Conception et gestion de la base de données MySQL.",
-      "Intégration de Google Maps API pour la géolocalisation.",
-      "Mise en place d'un système d'envoi de notifications SMS avec Vonage.",
-    ],
-  },
 
   {
     role: "Développeuse Logicielle",
@@ -29,6 +15,22 @@ const experiences = [
       "Collaboration au développement et au déploiement de l'application avec Docker et Git.",
     ],
   },
+
+  {
+    role: "Développeuse Web Full Stack",
+    company: "Atech Cybersecurity",
+    period: "Stage",
+    date: "Mai 2025 - Juillet 2025",
+    description:
+      "Conception et réalisation d'une plateforme web permettant aux citoyens de signaler rapidement des accidents en transmettant leur localisation, des photos et une description aux services d'urgence afin d'améliorer leur temps d'intervention.",
+    tasks: [
+      "Développement d'une application web avec Laravel selon une architecture MVC.",
+      "Conception et gestion de la base de données MySQL.",
+      "Intégration de Google Maps API pour la géolocalisation.",
+      "Mise en place d'un système d'envoi de notifications SMS avec Vonage.",
+    ],
+  },
+
 ];
 
 export default function Experience() {

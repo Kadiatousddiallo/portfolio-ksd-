@@ -42,8 +42,8 @@ const projects: Project[] = [
       "Système de génération automatique de rapports intelligents à partir de données métier, avec tableaux de bord et export PDF.",
     technologies: ["Laravel", "PostgreSQL", "Angular", "Docker", "Laravel", "PHP", "Angular", "PostgreSQL", "Docker", "Docker Compose", "Chart.js", "Leaflet", "Git", "GitHub", "REST API", "Data Warehouse", "ETL", "IA"],
     githubUrl: "https://github.com/Kadiatousddiallo/siga-smart-reports",
-    demoUrl: "/projet/siga/demo.mp4",
-    imageUrl: "/projet/siga/apercu.png",
+    demoUrl: "/projet/SIGA/demo.mp4",
+    imageUrl: "/projet/SIGA/apercu.png",
   },
   {
     title: "Gestion des accidents - 2025",
