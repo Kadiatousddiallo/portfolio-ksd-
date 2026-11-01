@@ -32,7 +32,7 @@ const projects: Project[] = [
   "Visual Studio Code",
   "Git Bash",
 ],
-    githubUrl: "https://github.com/Kadiatousddiallo/siga-smart-reports",
+    githubUrl: "https://github.com/Kadiatousddiallo/BOUTIQUE.git",
     demoUrl: "/projet/boutique/demo.mp4",
     imageUrl: "/projet/boutique/apercu.png",
   },
@@ -41,7 +41,7 @@ const projects: Project[] = [
     description:
       "Système de génération automatique de rapports intelligents à partir de données métier, avec tableaux de bord et export PDF.",
     technologies: ["Laravel", "PostgreSQL", "Angular", "Docker", "Laravel", "PHP", "Angular", "PostgreSQL", "Docker", "Docker Compose", "Chart.js", "Leaflet", "Git", "GitHub", "REST API", "Data Warehouse", "ETL", "IA"],
-    githubUrl: "https://github.com/Kadiatousddiallo/siga-smart-reports",
+    githubUrl: "https://github.com/siga-smart-reports/frontend-siga-reporting",
     demoUrl: "/projet/SIGA/demo.mp4",
     imageUrl: "/projet/SIGA/apercu.png",
   },
@@ -61,7 +61,7 @@ const projects: Project[] = [
   "Visual Studio Code",
   "Laravel"
 ],
-    githubUrl: "https://github.com/Kadiatousddiallo/gestion-accidents",
+    githubUrl: "https://github.com/Kadiatousddiallo/GESTION-ACCIDENTS",
     demoUrl: "/projet/accidents/demo.mp4",
     imageUrl: "/projet/accidents/apercu.png",
   },
@@ -71,7 +71,7 @@ const projects: Project[] = [
     description:
       "Suivez les dernières informations de vos joueurs préférés. Consultez le classements, la programmation des matchs et bien plus encore",
     technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "Xampp",],
-    githubUrl: "https://github.com/Kadiatousddiallo/atp-finals",
+    githubUrl: "https://github.com/Kadiatousddiallo/projet-de-tenis-",
     // demoUrl: "/projet/atp/demo.jpg",
     imageUrl: "/projet/atp/apercu.png",
   },
