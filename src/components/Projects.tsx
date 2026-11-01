@@ -1,3 +1,4 @@
+
 type Project = {
   title: string;
   description: string;
@@ -8,60 +9,78 @@ type Project = {
 };
 
 const projects: Project[] = [
-
   {
     title: "Gestion des BOUTIQUES - 2026",
     description:
-      "Apllication de gestion des boutiques avec fonctionnalités de suivi des ventes, inventaire et rapports détaillés téléchargés.",
-   technologies: [
-  "Laravel ",
-  "PHP ",
-  "MySQL",
-  "Angular ",
-  "TypeScript",
-  "HTML5",
-  "CSS",
-  "Chart.js",
-  "Laravel Sanctum",
-  "DomPDF",
-  "Progressive Web App (PWA)",
-  "Service Worker",
-  "Git",
-  "Composer",
-  "XAMPP",
-  "Visual Studio Code",
-  "Git Bash",
-],
-    githubUrl: "https://github.com/Kadiatousddiallo/BOUTIQUE.git",
+      "Application de gestion des boutiques avec fonctionnalités de suivi des ventes, inventaire et rapports détaillés téléchargeables.",
+    technologies: [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Angular",
+      "TypeScript",
+      "HTML5",
+      "CSS",
+      "Chart.js",
+      "Laravel Sanctum",
+      "DomPDF",
+      "Progressive Web App (PWA)",
+      "Service Worker",
+      "Git",
+      "Composer",
+      "XAMPP",
+      "Visual Studio Code",
+      "Git Bash",
+    ],
+    githubUrl: "https://github.com/Kadiatousddiallo/BOUTIQUE",
     demoUrl: "/projet/boutique/demo.mp4",
     imageUrl: "/projet/boutique/apercu.png",
   },
+
   {
     title: "SIGA Smart Reports - 2026",
     description:
       "Système de génération automatique de rapports intelligents à partir de données métier, avec tableaux de bord et export PDF.",
-    technologies: ["Laravel", "PostgreSQL", "Angular", "Docker", "Laravel", "PHP", "Angular", "PostgreSQL", "Docker", "Docker Compose", "Chart.js", "Leaflet", "Git", "GitHub", "REST API", "Data Warehouse", "ETL", "IA"],
-    githubUrl: "https://github.com/siga-smart-reports/frontend-siga-reporting",
+    technologies: [
+      "Laravel",
+      "PHP",
+      "Angular",
+      "PostgreSQL",
+      "Docker",
+      "Docker Compose",
+      "Chart.js",
+      "Leaflet",
+      "Git",
+      "GitHub",
+      "REST API",
+      "Data Warehouse",
+      "ETL",
+      "IA",
+    ],
+    githubUrl:
+      "https://github.com/siga-smart-reports/frontend-siga-reporting",
     demoUrl: "/projet/SIGA/demo.mp4",
     imageUrl: "/projet/SIGA/apercu.png",
   },
+
   {
     title: "Gestion des accidents - 2025",
     description:
       "Application de gestion et de suivi des accidents : déclaration, historique, statistiques et notifications.",
     technologies: [
-  "Astah UML",
-  "HTML5",
-  "JavaScript",
-  "CSS3",
-  "Vonage",
-  "XAMPP",
-  "Google Maps API",
-  "MySQL",
-  "Visual Studio Code",
-  "Laravel"
-],
-    githubUrl: "https://github.com/Kadiatousddiallo/GESTION-ACCIDENTS",
+      "Astah UML",
+      "HTML5",
+      "JavaScript",
+      "CSS3",
+      "Vonage",
+      "XAMPP",
+      "Google Maps API",
+      "MySQL",
+      "Visual Studio Code",
+      "Laravel",
+    ],
+    githubUrl:
+      "https://github.com/Kadiatousddiallo/GESTION-ACCIDENTS",
     demoUrl: "/projet/accidents/demo.mp4",
     imageUrl: "/projet/accidents/apercu.png",
   },
@@ -69,9 +88,17 @@ const projects: Project[] = [
   {
     title: "ATP Finals - 2024",
     description:
-      "Suivez les dernières informations de vos joueurs préférés. Consultez le classements, la programmation des matchs et bien plus encore",
-    technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "Xampp",],
-    githubUrl: "https://github.com/Kadiatousddiallo/projet-de-tenis-",
+      "Suivez les dernières informations de vos joueurs préférés. Consultez le classement, la programmation des matchs et bien plus encore.",
+    technologies: [
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MySQL",
+      "XAMPP",
+    ],
+    githubUrl:
+      "https://github.com/Kadiatousddiallo/projet-de-tenis-",
     // demoUrl: "/projet/atp/demo.jpg",
     imageUrl: "/projet/atp/apercu.png",
   },
@@ -79,9 +106,14 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white">
+    <section
+      id="projects"
+      className="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-white"
+    >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projets</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">
+          Projets
+        </h2>
 
         <div className="grid sm:grid-cols-2 gap-8">
           {projects.map((project) => (
@@ -107,14 +139,15 @@ export default function Projects() {
                 <h3 className="text-lg font-semibold mb-2">
                   {project.title}
                 </h3>
+
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4 flex-1">
                   {project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-5">
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech, index) => (
                     <span
-                      key={tech}
+                      key={`${project.title}-${tech}-${index}`}
                       className="px-2.5 py-1 rounded-full bg-zinc-200 dark:bg-zinc-800 text-xs text-blue-400"
                     >
                       {tech}
@@ -133,6 +166,7 @@ export default function Projects() {
                       GitHub →
                     </a>
                   )}
+
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
